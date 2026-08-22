@@ -1,0 +1,117 @@
+/* Remove default spacing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef1f5;
+}
+
+/* Main calculator */
+.calculator {
+  width: 320px;
+  margin: 80px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.calculator h1 {
+  margin: 0 0 25px;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #222;
+}
+
+/* Display */
+.calculator input {
+  width: 100%;
+  height: 65px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #f1f3f6;
+  color: #222;
+
+  font-size: 28px;
+  font-weight: 500;
+  text-align: right;
+
+  outline: none;
+}
+
+/* Buttons container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* All buttons */
+.buttons button {
+  height: 60px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #e9edf2;
+  color: #222;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+/* Hover effect */
+.buttons button:hover {
+  background: #dce1e7;
+  transform: translateY(-2px);
+}
+
+/* Click effect */
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Operator buttons */
+.buttons button:nth-child(2),
+.buttons button:nth-child(3),
+.buttons button:nth-child(4),
+.buttons button:nth-child(8) {
+  background: #dbe7ff;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* Equal button */
+.buttons button:nth-child(12) {
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+.buttons button:nth-child(12):hover {
+  background: #1d4ed8;
+}
+
+/* Clear button */
+.buttons button:first-child {
+  background: #ffe1e1;
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.buttons button:first-child:hover {
+  background: #ffd0d0;
+}
