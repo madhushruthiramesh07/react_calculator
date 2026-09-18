@@ -1,51 +1,68 @@
-# Ex04 Simple Calculator - React Project
-## Date:22-03-2026
-## Name : Madhu Shruthi A.R
-## Reg No : 212225040216
+# Ex: 06 BMI Calculator
+## Date: 18-09-2026
 
 ## AIM
-To  develop a Simple Calculator using React.js with clean and responsive design, ensuring a smooth user experience across different screen sizes.
+To develop a responsive and interactive Body Mass Index (BMI) Calculator using React that allows users to input their height and weight, and calculates their BMI to categorize their health status (e.g., Underweight, Normal, Overweight, Obese).
 
-## ALGORITHM
-### STEP 1
-Create a React App.
+## DESIGN STEPS
 
-### STEP 2
-Open a terminal and run:
-  <ul><li>npx create-react-app simple-calculator</li>
-  <li>cd simple-calculator</li>
-  <li>npm start</li></ul>
+### STEP 1: Initialize React Project
 
-### STEP 3
-Inside the src/ folder, create a new file Calculator.js and define the basic structure.
+<li>Create a new React app using create-react-app.</li>
+<li>Install React Router using:</li>
+npm install react-router-dom
 
-### STEP 4
-Plan the UI: Display screen, number buttons (0-9), operators (+, -, *, /), clear (C), and equal (=).
+### STEP 2: Set Up Routing
 
-### STEP 5
-Create a new file Calculator.css in src/ and add the styling.
+Create routing structure with react-router-dom:
 
-### STEP 6
-Open src/App.js and modify it.
+<li>Home route (/) – Intro or Navigation</li>
 
-### STEP 7
-Start the development server.
-  npm start
+<li>BMI Calculator route (/bmi)</li>
 
-### STEP 8
-Open http://localhost:3000/ in the browser.
+<li>Result route (/result)</li>
 
-### STEP 9
-Test the calculator by entering numbers and operations.
+### STEP 3: Design the BMI Form Page
 
-### STEP 10
-Fix styling issues and refine content placement.
+<li>Create a form to accept Height (in cm or m) and Weight (in kg).</li>
 
-### STEP 11
-Deploy the website.
+<li>On form submit, navigate to the result page with entered values via URL query params or context/state.</li>
 
-### STEP 12
-Upload to GitHub Pages for free hosting.
+## STEP 4: Handle Input Validation
+
+<li>Check if height and weight are valid numbers.</li>
+
+<li>Optionally, show error messages for invalid inputs.</li>
+
+### STEP 5: Perform BMI Calculation
+
+<li>In the result component:
+
+<li>Extract height and weight from the route (URL or passed state).</li>
+
+<li>Apply the BMI formula:</li>
+
+![image](https://github.com/user-attachments/assets/ec785506-c96b-489e-8783-fb1a5d36101a)
+​
+ 
+<li>Convert height from cm to m if needed.</li></li>
+
+### STEP 6: Display Result
+
+<li>Show calculated BMI.</li>
+
+<li>Show category based on BMI range:
+
+<li>Underweight, Normal, Overweight, Obese, etc.</li></li>
+
+### STEP 7: Navigation Options
+
+<li>Provide a button to go back to the BMI form to calculate again.</li>
+
+### STEP 8: Enhancements
+
+<li>Add styling using CSS or Tailwind.</li>
+
 
 ## PROGRAM
 ```
@@ -309,4 +326,4 @@ button.reset:hover {
 <img width="1533" height="820" alt="Screenshot 2026-09-03 103756" src="https://github.com/user-attachments/assets/55487621-0c46-4191-b523-099f9594af64" />
 
 ## RESULT
-The program for developing a simple calculator in React.js is executed successfully.
+The BMI Calculator successfully takes user input for height and weight, performs the BMI calculation in real-time using React state and event handling, and displays the BMI value along with the corresponding health category.
